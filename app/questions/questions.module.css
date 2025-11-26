@@ -1,0 +1,155 @@
+.container {
+  min-height: 100vh;
+  background: #F8F9FA;
+}
+
+.header {
+  background: linear-gradient(135deg, #1B976D, #2BA87E);
+  color: white;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.headerText {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.questionContainer {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.questionText {
+  font-size: 18px;
+  color: #2C3E50;
+  line-height: 1.8;
+}
+
+.questionText strong {
+  color: #1B976D;
+  font-weight: 700;
+}
+
+.optionsContainer {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.optionWrapper {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.option {
+  width: 100%;
+  background: white;
+  border: 3px solid transparent;
+  border-radius: 16px;
+  padding: 32px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.option:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.videoOption {
+  border-color: #FF6B6B;
+}
+
+.videoOption:hover {
+  background: linear-gradient(135deg, #FF6B6B10, #FF6B6B20);
+  border-color: #FF6B6B;
+}
+
+.audioOption {
+  border-color: #4ECDC4;
+}
+
+.audioOption:hover {
+  background: linear-gradient(135deg, #4ECDC410, #4ECDC420);
+  border-color: #4ECDC4;
+}
+
+.textOption {
+  border-color: #FFD93D;
+}
+
+.textOption:hover {
+  background: linear-gradient(135deg, #FFD93D10, #FFD93D20);
+  border-color: #FFD93D;
+}
+
+.optionIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.optionText {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+.videoOption .optionText {
+  color: #FF6B6B;
+}
+
+.audioOption .optionText {
+  color: #4ECDC4;
+}
+
+.textOption .optionText {
+  color: #FFD93D;
+}
+
+@media (max-width: 768px) {
+  .headerText {
+    font-size: 24px;
+  }
+  
+  .questionContainer {
+    margin: 24px auto;
+    padding: 24px;
+  }
+  
+  .optionsContainer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .option {
+    padding: 24px;
+  }
+}

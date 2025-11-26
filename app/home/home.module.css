@@ -1,0 +1,258 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1B976D 0%, #2BA87E 100%);
+}
+
+.headerContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 32px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.headerTextContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcomeText {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.customerName {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.timeGreetingContainer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.timeGreeting {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.termsContainer {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.checkboxContainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.checkboxContainer input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #1B976D;
+}
+
+.termsText {
+  font-size: 16px;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+.termsLink {
+  color: #1B976D;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.termsLink:hover {
+  color: #156B4F;
+}
+
+.typeContainer {
+  max-width: 400px;
+  margin: 32px auto;
+  padding: 0 24px;
+}
+
+.gradientButton {
+  width: 100%;
+  background: white;
+  color: #1B976D;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gradientButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalContent {
+  background: white;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #F8F9FA;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  background: #E0E0E0;
+  transform: rotate(90deg);
+}
+
+.modalHeading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C3E50;
+  padding: 24px 24px 16px;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+.scrollContainer {
+  overflow-y: auto;
+  padding: 24px;
+  flex: 1;
+}
+
+.termsContent {
+  color: #2C3E50;
+  line-height: 1.8;
+}
+
+.termsContent h3 {
+  color: #1B976D;
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.termsContent h4 {
+  color: #2C3E50;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.termsContent p {
+  margin-bottom: 12px;
+  color: #7F8C8D;
+}
+
+.acceptButton {
+  margin: 0 24px 24px;
+  background: linear-gradient(135deg, #1B976D, #2BA87E);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(27, 151, 109, 0.3);
+}
+
+.acceptButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 151, 109, 0.4);
+}
+
+@media (max-width: 768px) {
+  .customerName {
+    font-size: 24px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+}

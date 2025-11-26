@@ -1,0 +1,160 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.closeButton:hover {
+  background: #f0f0f0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 30px 20px 20px 20px;
+  color: #333;
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.scrollContainer {
+  height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.termsContent {
+  line-height: 1.6;
+  color: #333;
+}
+
+.termsContent h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #000;
+}
+
+.termsContent h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  color: #000;
+}
+
+.termsContent p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+.termsContent ul {
+  margin: 0 0 15px 20px;
+  padding: 0;
+}
+
+.termsContent li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.acceptButton {
+  width: calc(100% - 40px);
+  height: 50px;
+  background: linear-gradient(135deg, rgb(10,95,151) 0%, rgb(26,129,198) 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 20px;
+  transition: transform 0.2s;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.acceptButton:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 10px;
+  }
+  
+  .modal {
+    max-height: 90vh;
+  }
+  
+  .title {
+    font-size: 20px;
+    padding: 25px 15px 15px 15px;
+  }
+  
+  .content {
+    padding: 0 15px;
+  }
+  
+  .scrollContainer {
+    height: 300px;
+  }
+  
+  .acceptButton {
+    margin: 15px;
+    width: calc(100% - 30px);
+  }
+}
